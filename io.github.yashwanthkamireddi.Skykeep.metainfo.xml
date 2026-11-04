@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  The Flatpak copy of packaging/io.github.yashwanthkamireddi.Skykeep.metainfo.xml (that one
+  names the .deb's launcher, Skykeep.desktop). Keep the two in step. Flathub requires this
+  file; GNOME Software and
+  KDE Discover read it to build the page someone decides from.
+
+  Every claim here has to be one the app can keep. The disclaimer is not boilerplate: this
+  talks to iCloud through interfaces Apple has not published, and somebody installing it is
+  entitled to know that before they type their Apple Account password.
+-->
+<component type="desktop-application">
+  <id>io.github.yashwanthkamireddi.Skykeep</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-only</project_license>
+
+  <name>Skykeep</name>
+  <summary>Your iCloud, on this computer</summary>
+
+  <description>
+    <p>
+      Skykeep brings your iCloud notes, reminders, calendar, contacts, Drive and photos to
+      your computer as fast desktop apps. Your library is kept on this machine, so everything
+      opens straight away, even offline, and what you change here reaches your iPhone and
+      your other devices.
+    </p>
+    <p>
+      Sign in once with your Apple Account. Your password stays on this computer, in your
+      system keyring. Skykeep connects to Apple for your iCloud and to the calendars you
+      subscribe to, and Flatpak keeps it up to date. There is no Skykeep account and no
+      analytics.
+    </p>
+    <p>
+      Skykeep is an independent, open-source project. It is not made by, endorsed by, or
+      affiliated with Apple, and it reaches iCloud through interfaces Apple has not
+      published, so Apple may change them at any time.
+    </p>
+  </description>
+
+  <launchable type="desktop-id">io.github.yashwanthkamireddi.Skykeep.desktop</launchable>
+
+  <categories>
+    <category>Utility</category>
+    <category>Office</category>
+  </categories>
+
+  <keywords>
+    <keyword>iCloud</keyword>
+    <keyword>calendar</keyword>
+    <keyword>reminders</keyword>
+    <keyword>notes</keyword>
+    <keyword>contacts</keyword>
+    <keyword>sync</keyword>
+  </keywords>
+
+  <provides>
+    <mediatype>text/calendar</mediatype>
+    <mediatype>text/vcard</mediatype>
+    <mediatype>text/x-vcard</mediatype>
+    <binary>skykeep</binary>
+  </provides>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Notes, in their folders</caption>
+      <image type="source">https://raw.githubusercontent.com/YashwanthKamireddi/Skykeep/main/docs/media/screenshots/notes-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Reminders, in their lists</caption>
+      <image type="source">https://raw.githubusercontent.com/YashwanthKamireddi/Skykeep/main/docs/media/screenshots/reminders-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Calendar</caption>
+      <image type="source">https://raw.githubusercontent.com/YashwanthKamireddi/Skykeep/main/docs/media/screenshots/calendar-light.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>The photo library</caption>
+      <image type="source">https://raw.githubusercontent.com/YashwanthKamireddi/Skykeep/main/docs/media/screenshots/photos-light.png</image>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1"/>
+
+  <url type="homepage">https://github.com/YashwanthKamireddi/Skykeep</url>
+  <url type="vcs-browser">https://github.com/YashwanthKamireddi/Skykeep</url>
+  <url type="bugtracker">https://github.com/YashwanthKamireddi/Skykeep/issues</url>
+
+  <developer id="io.github.yashwanthkamireddi">
+    <name>Yashwanth Kamireddi</name>
+  </developer>
+
+  <requires>
+    <internet>first-run</internet>
+  </requires>
+
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </recommends>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#BFE0FF</color>
+    <color type="primary" scheme_preference="dark">#0B2A4A</color>
+  </branding>
+  <releases>
+    <release version="0.1.3" date="2026-11-04">
+      <description>
+        <p>When Apple doesn't accept a password, Skykeep now says so plainly, and that an app-specific password can't sign in.</p>
+      </description>
+    </release>
+    <release version="0.1.2" date="2026-11-04">
+      <description>
+        <p>Every Apple ID signs in, an AppImage for Ubuntu 22.04 and newer, a locked Hidden album in Photos, Keep Both or Replace when pasting in iCloud Drive, drag and drop inside windows on Windows, and fixes across every app.</p>
+      </description>
+    </release>
+    <release version="0.1.1" date="2026-11-03">
+      <description>
+        <p>
+          The first release of Skykeep: iCloud Notes, Reminders, Calendar, Contacts, iCloud
+          Drive and Photos as six desktop apps with one sign-in, kept on your computer and in
+          sync with your iPhone.
+        </p>
+        <ul>
+          <li>Notes and Reminders changes from your iPhone usually arrive in about a second</li>
+          <li>Everything opens instantly and works offline, and your edits sync when you reconnect</li>
+          <li>A note edited here and on your phone at the same time is merged, not overwritten</li>
+          <li>Search across every app, quick capture, and reminder alerts with Complete and Snooze</li>
+          <li>Export Everything to Markdown, iCalendar, vCard and your original files</li>
+        </ul>
+      </description>
+    </release>
+  </releases>
+</component>
